@@ -1,0 +1,8 @@
+{
+    "runs": {
+        "/home/dewang/smartKT/SmartKTRepo/projects/libpng/build/pngtest": {
+            "/home/dewang/smartKT/SmartKTRepo/projects/libpng/pngtest.png" : 1,
+            "/home/dewang/smartKT/SmartKTRepo/projects/libpng/pngbar.png": 1
+        }
+    }
+}
