@@ -21,8 +21,8 @@ For eg, for libpng the contents of runs_json file would be
 ```
 {
     "runs": {
-        "/home/dewang/smartKT/SmartKTRepo/projects/libpng/build/pngtest": {
-            "/home/dewang/smartKT/SmartKTRepo/projects/libpng/pngtest.png" : 1
+        "/home/user/smartKT/SmartKTRepo/projects/libpng/build/pngtest": {
+            "/home/user/smartKT/SmartKTRepo/projects/libpng/pngtest.png" : 1
         }
     }
 }
