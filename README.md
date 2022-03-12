@@ -1,6 +1,6 @@
 # Semantic-Search-Tool
 
-Instructions : 
+Instructions for running the search tool of SmartKT: 
 
 1. Create a config.json
 
