@@ -7,7 +7,11 @@ Instructions for running the search tool of SmartKT (shown for libpng project): 
    
    Extract it 
 
-2. Clone the Semantic Search tool project in Create a config.json. This file should be placed under the fol
+2. Clone the Semantic Search tool project from https://github.com/SMARTKT/Semantic-Search-Tool.git 
+
+Extract the folder. cd to sub folder Semantic-Search-Tool-main. 
+
+Create a config.json (you might already find a config.json file, edit it with your system local paths). This file should be placed under the following 
 
 The config.json should have the following keys : 
 
@@ -33,7 +37,7 @@ We show an example for the libpng project, checking up the add_executable comman
 The number 1 specify that the file should be run with the input once. We might want to run the same file with the same input to understand non-deterministic behaviour in case of mulit-threaded applications
 
 
-3. cd to folder Semantic-Search-Tool-main.  Run main.py with argument as the path to config.json.
+3. cd to folder Semantic-Search-Tool-main.  Run main.py with  config.json.
 
 ```
 python main.py <path to config.json>
