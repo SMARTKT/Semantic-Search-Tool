@@ -1,22 +1,25 @@
 # Semantic-Search-Tool
 
-Instructions for running the search tool of SmartKT: 
+Instructions for running the search tool of SmartKT (shown for libpng project): SmartKT applies to projects which are built up on Cmake. 
 
-1. Create a config.json
+1. Clone the libpng project from github
+   https://github.com/glennrp/libpng
+   
+   Extract it 
+
+2. Clone the Semantic Search tool project in Create a config.json. This file should be placed under the fol
 
 The config.json should have the following keys : 
 
 - python_path [optional, default = python] : the path to python. For machines which use python3 to run python scripts, create this key with appropriate value in the json file.
 
-- project_path : Path to the project. It should have a CMakeLists.txt file
+- project_path : Path to the project. In this case path to the extracted folder of libpng like /home/user/SmartKT_Search_Tool/libpng
 
-- output_path : Path where the output of the Search Tool will be stored
+- output_path : Path where the output of the Search Tool will be stored: Create a folder named outputs in any directory like    /home/user/SmartKT_Search_Tool/outputs/
 
-- runs_json_path : Path to the runs json file required by the Search Tool.
+- runs_json_path : Path to the runs json file. To build this file, we should be aware of the executable name and the inputs to a project. For the executable name, look up for the add_executable command in the cmakelists.txt file for a project. 
 
-The runs_json should have a key called "runs" whose value will be a dictionary whose key is a binary and value will be another dictionary with test input as key and number of times to run as value.
-
-For eg, for libpng the contents of runs_json file would be 
+We show an example for the libpng project, checking up the add_executable command in the cmakelists.txt, we see pngtest, pngimage etc are the executables. We select pngtest and also pngtest.png as the input and write the runs.json file as below
 
 ```
 {
@@ -27,12 +30,10 @@ For eg, for libpng the contents of runs_json file would be
     }
 }
 ```
-
-Here pngtest is the binary, the path to image is the input, and for this input the binary is run once.
-
+The number 1 specify that the file should be run with the input once. We might want to run the same file with the same input to understand non-deterministic behaviour in case of mulit-threaded applications
 
 
-2. Run main.py with argument as the path to config.json
+3. cd to folder Semantic-Search-Tool-main.  Run main.py with argument as the path to config.json.
 
 ```
 python main.py <path to config.json>
